@@ -1,0 +1,25 @@
+/* CREW*/
+
+.mainCrew {
+  width: 100%;
+  padding: 24px;
+  margin-left: auto;
+}
+.mainCrew h1 {
+  background-color: #f76c6c;
+  width: 40%;
+  border-radius: 16px;
+  padding: 8px;
+  margin: auto;
+  margin-top: 42px;
+  margin-bottom: 56px;
+}
+.mainCrew ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.quentin img {
+  width: 150px;
+  border-radius: 16px;
+}

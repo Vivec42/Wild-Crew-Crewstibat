@@ -72,7 +72,12 @@ nav a:hover {
 .mainIndex {
   width: 100%;
   padding: 16px;
-  margin-left: 36px;
+}
+.description p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
 }
 .actu {
   margin-top: 4rem;
@@ -81,134 +86,40 @@ nav a:hover {
 .actu h2 {
   margin-bottom: 2rem;
   background-color: #f76c6c;
-  width: 45%;
+  width: 40%;
   border-radius: 16px;
   padding: 8px;
+  margin: auto;
 }
+/*
 .imgWCS {
   max-width: 60%;
   height: auto;
 }
+*/
 /*nouveau css*/
 
+/* responsables essai
+.resp {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 0.5fr, 1fr, 1fr, 1fr);
+  max-width: 360px;
+  gap: 1rem;
+  text-align: center;
+}
 .resp h2 {
   background-color: #f76c6c;
-  width: 63%;
+  width: 58%;
   border-radius: 16px;
   padding: 8px;
+  margin: auto;
+  margin-bottom: 24px;
 }
 
-/* CREW*/
-
-.mainCrew {
-  width: 100%;
-  padding: 16px;
-  margin-left: 36px;
+.resp img {
+  width: 150px;
+  border-radius: 16px;
 }
+/*
 
-/* CONTACT */
-
-:root {
-  --color-first: #000000;
-  --color-second: #f0f0f0;
-  --color-whithe: #fff;
-  --color-succes: #2ecc71;
-  --color-error: #e74c3c;
-}
-
-.boody {
-  padding: 16px;
-}
-.container {
-  background: var(--color-whithe);
-  border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  width: 400px;
-  max-width: 100%;
-}
-.header {
-}
-
-.form {
-  padding: 30px 40px;
-}
-
-.form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.form-control label {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.form-control input {
-  border: 2px solid var(--color-second);
-  border-radius: 4px;
-  display: block;
-  font-family: inherit;
-  font-size: 14px;
-  width: 100%;
-  height: 40px;
-  padding-left: 10px;
-}
-
-.form-control i {
-  position: absolute;
-  top: 36px;
-  right: 10px;
-  visibility: hidden;
-}
-
-.form-control small {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form button {
-  background: var(--color-first);
-  border: 2px solid var(--color-first);
-  color: #f7f7f7;
-  display: block;
-  font-family: inherit;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-}
-
-.form-control.succes input {
-  border-color: var(--color-succes);
-}
-
-.form-control.error input {
-  border-color: var(--color-error);
-}
-
-.form-control.succes i.fa-check-circle {
-  color: var(--color-succes);
-  visibility: visible;
-}
-
-.form-control.error i.fa-exclamation {
-  color: var(--color-error);
-  visibility: visible;
-}
-
-.form-control.error small {
-  color: var(--color-error);
-  visibility: visible;
-}
-
-@media screen and (max-width: 680px) {
-  nav .onglets {
-    margin-left: 8px;
-    margin-bottom: 20px;
-  }
-}
-
-/* CONTACT */
