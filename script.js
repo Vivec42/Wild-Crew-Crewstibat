@@ -1,11 +1,13 @@
-// BURGER MENU
 function burgerMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+  const rotateBtn = document.querySelector("#burgerButton");
+  const translate = document.querySelector("#myLinks");
+  const fa = document.querySelector(".fa");
+  const div = document.querySelector(".content");
+  rotateBtn.addEventListener("click", function () {
+    fa.classList.toggle("rotate");
+    translate.classList.toggle("translate");
+    div.classList.toggle("menu-open");
+  });
 }
-// BURGER MENU
 
+burgerMenu();
