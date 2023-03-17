@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /*nouveau css*/
 body {
   background-color: lightgoldenrodyellow;
@@ -20,6 +21,7 @@ h1 {
   display: flex;
   align-items: center;
 }
+
 /* BURGER MENU */
 
 /* Style the navigation menu */
@@ -74,29 +76,35 @@ nav a:hover {
   padding: 16px;
 }
 .description p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 24px;
+  text-align: center;
+  margin-top: 70px;
+  font-weight: bold;
+  color: black;
+
 }
 .actu {
   margin-top: 4rem;
   margin-bottom: 6rem;
 }
 .actu h2 {
-  margin-bottom: 2rem;
   background-color: #f76c6c;
   width: 40%;
   border-radius: 16px;
   padding: 8px;
   margin: auto;
 }
-/*
+.caroussel{
+  text-align: center;
+}
+.lienwcs{
+  display: none;
+}
 .imgWCS {
+  margin-top: 36px;
   max-width: 60%;
   height: auto;
 }
-*/
+
 /*nouveau css*/
 
 /* responsables essai
