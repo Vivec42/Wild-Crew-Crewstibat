@@ -1,64 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/*nouveau css*/
-body {
-  background-color: lightgoldenrodyellow;
-  font-family: "Varela", sans-serif;
-}
-a {
-  display: none;
-}
-
-header {
-  background-color: #f76c6c;
-  width: 100%;
-  height: 70px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
-}
-h1 {
-  font-size: 1.6em;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.actu {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-}
-.actu h2 {
-  margin-bottom: 2rem;
-  background-color: #f76c6c;
-  width: 45%;
-  border-radius: 16px;
-  padding: 8px;
-}
-main {
-  width: 100%;
-  padding: 16px;
-  margin-left: 36px;
-}
-
-.imgWCS {
-  max-width: 60%;
-  height: auto;
-}
-/*nouveau css*/
-
-.resp h2 {
-  background-color: #f76c6c;
-  width: 63%;
-  border-radius: 16px;
-  padding: 8px;
-}
-
-/* BURGER MENU */
-
-/* Style the navigation menu */
 nav {
   background-color: #f76c6c;
   position: relative;
@@ -69,7 +9,6 @@ nav {
   z-index: 2;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
 #myLinks {
   background-color: #e26464;
   width: 100%;
@@ -86,7 +25,6 @@ nav {
   transition: all 0.8s ease-out;
 }
 
-/* Style navigation menu links */
 ul a {
   color: white;
   padding: 12px 16px;
@@ -97,7 +35,6 @@ ul a {
   transition: 0.3s;
 }
 
-/* Style the hamburger menu */
 .fa {
   font-size: 40px;
   color: white;
@@ -131,149 +68,13 @@ ul a {
   transition: all 0.8s ease-out;
 }
 
-/* Add a grey background color on mouse-over */
 nav ul a:hover {
   background-color: #ffffff;
   color: #f76c6c;
   transition: 0.3s;
 }
 
-/* Style the active link (or home/logo) */
 .active {
   background-color: #04aa6d;
   color: white;
 }
-
-/* BURGER MENU */
-
-.actu {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-}
-.actu h2 {
-  margin-bottom: 2rem;
-  background-color: #f76c6c;
-  width: 45%;
-  border-radius: 16px;
-  padding: 8px;
-}
-main {
-  width: 100%;
-  padding: 16px;
-  margin-left: 36px;
-}
-
-.imgWCS {
-  max-width: 60%;
-  height: auto;
-}
-/*nouveau css*/
-
-.resp h2 {
-  background-color: #f76c6c;
-  width: 63%;
-  border-radius: 16px;
-  padding: 8px;
-}
-
-/* CONTACT */
-
-:root {
-  --color-first: #000000;
-  --color-second: #f0f0f0;
-  --color-whithe: #fff;
-  --color-succes: #2ecc71;
-  --color-error: #e74c3c;
-}
-
-.container {
-  background: var(--color-whithe);
-  border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  width: 400px;
-  max-width: 100%;
-}
-
-.form {
-  padding: 30px 40px;
-}
-
-.form-control {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-}
-
-.form-control label {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.form-control input {
-  border: 2px solid var(--color-second);
-  border-radius: 4px;
-  display: block;
-  font-family: inherit;
-  font-size: 14px;
-  width: 100%;
-  height: 40px;
-  padding-left: 10px;
-}
-
-.form-control i {
-  position: absolute;
-  top: 36px;
-  right: 10px;
-  visibility: hidden;
-}
-
-.form-control small {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form button {
-  background: var(--color-first);
-  border: 2px solid var(--color-first);
-  color: #f7f7f7;
-  display: block;
-  font-family: inherit;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-}
-
-.form-control.succes input {
-  border-color: var(--color-succes);
-}
-
-.form-control.error input {
-  border-color: var(--color-error);
-}
-
-.form-control.succes i.fa-check-circle {
-  color: var(--color-succes);
-  visibility: visible;
-}
-
-.form-control.error i.fa-exclamation {
-  color: var(--color-error);
-  visibility: visible;
-}
-
-.form-control.error small {
-  color: var(--color-error);
-  visibility: visible;
-}
-
-@media screen and (max-width: 680px) {
-  nav .onglets {
-    margin-left: 8px;
-    margin-bottom: 20px;
-  }
-}
-
-/* CONTACT */
