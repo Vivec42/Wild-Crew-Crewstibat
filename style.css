@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-}
-
 /*nouveau css*/
 body {
   background-color: lightgoldenrodyellow;
@@ -18,6 +15,7 @@ a {
 
 header {
   background-color: #f76c6c;
+  width: 100%;
   height: 70px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
 }
@@ -62,44 +60,82 @@ main {
 
 /* Style the navigation menu */
 nav {
-  overflow: hidden;
-  background-color: #cf5d5d;
+  background-color: #f76c6c;
   position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 2;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-nav #myLinks {
-  display: none;
+#myLinks {
+  background-color: #e26464;
+  width: 100%;
+  height: 151px;
+  position: absolute;
+  transform: translateY(0);
+  top: -151px;
+  left: 0;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+#myLinks.translate {
+  transform: translateY(145%);
+  transition: all 0.8s ease-out;
 }
 
 /* Style navigation menu links */
-nav a {
+ul a {
   color: white;
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 17px;
-  display: block;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.3s;
 }
 
 /* Style the hamburger menu */
-nav a.icon {
-  background: white;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+.fa {
+  font-size: 40px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
 }
 
-.fa {
-  right: 0;
-  top: 0;
-  color: white;
+.fa.rotate {
+  transform: rotate(90deg);
+}
+
+#burgerButton {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  border: none;
+  background: none;
+  padding: 18px;
+}
+
+.content {
+  margin-top: 0;
+  width: 100%;
+  height: 0px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.content.menu-open {
+  height: 151px;
+  transition: all 0.8s ease-out;
 }
 
 /* Add a grey background color on mouse-over */
-nav a:hover {
-  background-color: #ddd;
-  color: black;
+nav ul a:hover {
+  background-color: #ffffff;
+  color: #f76c6c;
+  transition: 0.3s;
 }
 
 /* Style the active link (or home/logo) */
@@ -110,10 +146,37 @@ nav a:hover {
 
 /* BURGER MENU */
 
-/* CONTACT */
+.actu {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+.actu h2 {
+  margin-bottom: 2rem;
+  background-color: #f76c6c;
+  width: 45%;
+  border-radius: 16px;
+  padding: 8px;
+}
+main {
+  width: 100%;
+  padding: 16px;
+  margin-left: 36px;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+.imgWCS {
+  max-width: 60%;
+  height: auto;
+}
+/*nouveau css*/
+
+.resp h2 {
+  background-color: #f76c6c;
+  width: 63%;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+/* CONTACT */
 
 :root {
   --color-first: #000000;
@@ -123,35 +186,12 @@ nav a:hover {
   --color-error: #e74c3c;
 }
 
-.boody {
-  background: var(--color-first);
-  font-family: "Open sabs" sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
 .container {
   background: var(--color-whithe);
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   width: 400px;
   max-width: 100%;
-}
-
-.header {
-  background: #f7f7f7;
-  border-bottom: 1px solid var(--color-second);
-  padding: 20px 40px;
-}
-
-.header h2 {
-  margin: 0;
-  text-align: center;
-  font-style: italic;
 }
 
 .form {

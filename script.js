@@ -1,12 +1,27 @@
 // BURGER MENU
 function burgerMenu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+  const rotateBtn = document.querySelector("#burgerButton");
+  const translate = document.querySelector("#myLinks");
+  const fa = document.querySelector(".fa");
+  const div = document.querySelector(".content");
+  rotateBtn.addEventListener("click", function () {
+    fa.classList.toggle("rotate");
+    translate.classList.toggle("translate");
+    div.classList.toggle("menu-open");
+  });
 }
+
+burgerMenu();
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   var rotateBtn = document.querySelector("#rotate-btn");
+//   var box = document.querySelector(".fa");
+
+//   rotateBtn.addEventListener("click", function() {
+//     box.classList.toggle("rotate");
+//   });
+// });
+
 // BURGER MENU
 
 // CONTACT
