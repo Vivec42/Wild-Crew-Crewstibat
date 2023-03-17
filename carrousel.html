@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrousel.css">
-    <script src="carrousel.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="carrousel.css">
+  <script src="carrousel.js"></script>
+  <title>Document</title>
 </head>
 <body>
-    <main>
-
-        <div id="carousel">
-    
-           <div class="hideLeft">
-            <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
-          </div>
-    
-          <div class="prevLeftSecond">
-            <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
-          </div>
-    
-          <div class="prev">
-            <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
-          </div>
-    
-          <div class="selected">
-            <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
-          </div>
-    
-          <div class="next">
-            <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
-          </div>
-    
-          <div class="nextRightSecond">
-            <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
-          </div>
-    
-          <div class="hideRight">
-            <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
-          </div>
-    
-        </div>
-    
-        <div class="buttons">
-          <button id="prev">Prev</button>
-          <button id="next">Next</button>
-        </div>
-    
-      </main>
+  <div class="container">
+    <input type="radio" name="slider" id="item-1" checked>
+    <input type="radio" name="slider" id="item-2">
+    <input type="radio" name="slider" id="item-3">
+  <div class="cards">
+    <label class="card" for="item-1" id="song-1">
+      <img src="https://images.pexels.com/photos/1754986/pexels-photo-1754986.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="un chat">
+      <figcaption>
+        <h2>MIAW</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aperiam, laudantium quos omnis recusandae, rem magni fugit quisquam et ea nam delectus deleniti voluptates? Veritatis facilis nobis delectus sed quibusdam!</p>
+      </figcaption>
+    </label>
+    <label class="card" for="item-2" id="song-2">
+      <img src="https://images.pexels.com/photos/15435631/pexels-photo-15435631.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="un chat qui dort">
+      <figcaption>
+        <h2>MEOW</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aperiam, laudantium quos omnis recusandae, rem magni fugit quisquam et ea nam delectus deleniti voluptates? Veritatis facilis nobis delectus sed quibusdam!</p>
+      </figcaption>
+    </label>
+    <label class="card" for="item-3" id="song-3">
+      <img src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="un gros chat roux">
+      <figcaption>
+        <h2>MIAOU</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aperiam, laudantium quos omnis recusandae, rem magni fugit quisquam et ea nam delectus deleniti voluptates? Veritatis facilis nobis delectus sed quibusdam!</p>
+      </figcaption>
+    </label>
+  </label>
+  </div>
 </body>
 </html>
