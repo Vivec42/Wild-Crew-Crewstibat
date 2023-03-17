@@ -21,25 +21,28 @@
       href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <script src="../script.js" defer></script>
+    <script src="./contact.js" defer></script>
     <title>Wild Crewstibat</title>
   </head>
 
   <body>
     <header>
-      <h1>Wild Crewstibat</h1>
       <nav>
-        <ul id="myLinks">
-          <a href="./index.html">Home</a
-          ><a href="./crew.html">Crew</a
-          ><a href="./contact.html">Inscription</a>
-        </ul>
-        <a href="javascript:void(0);" class="icon" onclick="burgerMenu()"></a>
-        <i class="fa fa-bars"></i>
+        <h1>Wild Crewstibat</h1>
+        <button id="burgerButton"><i class="fa fa-bars"></i></button>
       </nav>
     </header>
-    <main class="boody">
+    <ul id="myLinks">
+      <a href="../index.html">Home</a
+      ><a href="../Crew/crew.html">Crew</a
+      ><a href="./contact.html">Inscription</a>
+    </ul>
+    <div class="content"></div>
+
+    <div class="boody">
       <div class="container">
         <div class="header">
           <h2>Contactez-nous</h2>
@@ -55,15 +58,6 @@
           <div class="form-control">
             <label for="">Votre Nom</label>
             <input type="text" id="username2" placeholder="Harry Cover" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation"></i>
-            <small>Erreur</small>
-          </div>
-        </div>
-        <form class="form" id="form">
-          <div class="form-control">
-            <label for="">Votre Nom</label>
-            <input type="text" id="username" placeholder="Harry Cover"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation"></i>
             <small>Erreur</small>
@@ -96,9 +90,8 @@
           <button type="submit">
             <i class="fas fa-user-plus"></i>Envoyez le Message
           </button>
-          <button type="submit"><i class="fas fa-user-plus"></i>Envoyez le Message</button>
         </form>
       </div>
-    </main>
+    </div>
   </body>
 </html>
