@@ -6,7 +6,7 @@
   margin-left: auto;
 }
 .mainCrew h1 {
-  background-color: #f76c6c;
+  background-color: var(--colorTheme);
   width: 40%;
   border-radius: 16px;
   padding: 8px;
