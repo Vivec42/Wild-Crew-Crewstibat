@@ -1,188 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
 * {
     box-sizing: border-box;
-}
-
-body {
     margin: 0;
     padding: 8;
-    font-family: 'Montserrat', sans-serif;
-
 }
 
+/*nouveau css*/
+body {
+background-color: lightgoldenrodyellow;
+font-family: "Varela", sans-serif;
+}
+a {
+  display: none;
+}
+
+header {
+  position: relative;
+  background-color: #f76c6c;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
+  z-index: 3;
+}
+h1 {
+  font-size: 1.6em;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* BURGER MENU */
+
+/* Style the navigation menu */
 nav {
-    overflow: hidden;
-    background-color: #cf5d5d;
-    position: relative;
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  nav #myLinks {
-    display: none;
-  }
-  
-  /* Style navigation menu links */
-  nav a {
-    color: rgb(255, 255, 255);
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Style the hamburger menu */
-  nav a.icon {
-    background: rgb(255, 255, 255);
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .fa {
-    color: white;
-    justify-content: end;
-  }
-  
-  /* Add a grey background color on mouse-over */
-  nav a:hover {
-    background-color: #cac3c3;
-    color: black;
-  }
-  
-  /* Style the active link (or home/logo) */
-  .active {
-    background-color: #04aa6d;
-    color: white;
-  }
-  
-
-:root {
-    --color-first: #000000;
-    --color-second: #f0f0f0;
-    --color-whithe: #fff;
-    --color-succes: #2ecc71;
-    --color-error: #e74c3c;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
 }
 
-
-.boody {
-    background: var(--color-first);
-    font-family: "Open sabs" sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    overflow: hidden;
-
+/* Hide the links inside the navigation menu (except for logo/home) */
+#myLinks {
+  background-color: #e26464;
+  width: 100%;
+  height: 151px;
+  position: absolute;
+  transform: translateY(0);
+  top: -151px;
+  left: 0;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+#myLinks.translate {
+  transform: translateY(145%);
+  transition: all 0.8s ease-out;
 }
 
-.container {
-    background: var(--color-whithe);
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.5);
-    width: 400px;
-    max-width: 100%;
-
+/* Style navigation menu links */
+ul a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.3s;
 }
 
-.header {
-    background: #df6868;
-    border-bottom: 1px solid var(--color-second);
-    padding: 20px 40px;
+/* Style the hamburger menu */
+.fa {
+  font-size: 40px;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
 }
 
-.header h2 {
-    margin: 0;
-    text-align: center;
-    font-style: italic;
+.fa.rotate {
+  transform: rotate(90deg);
 }
 
-.form {
-    padding:  30px 40px;
+#burgerButton {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: none;
+  padding: 18px;
 }
 
-.form-control {
-    margin-bottom: 10px;
-    padding-bottom: 20px;
-    position: relative;
+.content {
+  margin-top: 0;
+  width: 100%;
+  height: 0px;
+  transition: all 0.3s ease;
+  z-index: 0;
 }
 
-.form-control label {
-    display: inline-block;
-    margin-bottom: 5px;
+.content.menu-open {
+  height: 149px;
+  transition: all 0.8s ease-out;
 }
 
-.form-control input {
-    border: 2px solid var(--color-second);
-    border-radius: 4px;
-    display: block;
-    font-family: inherit;
-    font-size: 14px;
-    width: 100%;
-    height: 40px;
-    padding-left: 10px;
-
+/* Add a grey background color on mouse-over */
+nav ul a:hover {
+  background-color: #ffffff;
+  color: #f76c6c;
+  transition: 0.3s;
 }
 
-.form-control i {
-    position: absolute;
-    top: 36px;
-    right: 10px;
-    visibility: hidden;
-
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04aa6d;
+  color: white;
 }
 
-.form-control small {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
+/* BURGER MENU */
+.mainIndex {
+  width: 100%;
+  padding: 16px;
 }
-
-.form button {
-    background: var(--color-first);
-    border: 2px solid var(--color-first);
-    color: #f7f7f7;
-    display: block;
-    font-family: inherit;
-    border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
+.description p {
+  text-align: center;
+  margin-top: 70px;
+  font-weight: bold;
+  color: black;
 }
-
-.form-control.succes input {
-    border-color: var(--color-succes);
+.actu {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
-
-.form-control.error input {
-    border-color: var(--color-error);
+.actu h2 {
+  background-color: #f76c6c;
+  width: 40%;
+  border-radius: 16px;
+  padding: 8px;
+  margin: auto;
 }
-
-.form-control.succes i.fa-check-circle {
-    color: var(--color-succes);
-    visibility: visible;
+.caroussel {
+  text-align: center;
 }
-
-.form-control.error i.fa-exclamation {
-    color: var(--color-error);
-    visibility: visible;
-}
-
-.form-control.error small {
-    color: var(--color-error);
-    visibility: visible;
+.lienwcs {
+  display: none;
 }
 
 
 
-@media screen and (max-width:680px) {
-    nav .onglets{
-        margin-left: 8px;
-        margin-bottom: 20px;
-    }
+/*nouveau css*/
+
+/* responsables essai
+.resp {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 0.5fr, 1fr, 1fr, 1fr);
+  max-width: 360px;
+  gap: 1rem;
+  text-align: center;
 }
+.resp h2 {
+  background-color: #f76c6c;
+  width: 58%;
+  border-radius: 16px;
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+.resp img {
+  width: 150px;
+  border-radius: 16px;
+}
+*/
