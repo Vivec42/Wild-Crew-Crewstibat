@@ -1,13 +1,5 @@
-:root {
-  --color-first: #000000;
-  --color-second: #f0f0f0;
-  --color-whithe: #fff;
-  --color-succes: #2ecc71;
-  --color-error: #e74c3c;
-}
-
 .boody {
-  background: var(--color-first);
+  background: var(--color-second);
   font-family: "Open sabs" sans-serif;
   display: flex;
   align-items: center;
@@ -18,7 +10,7 @@
 }
 
 .container {
-  background: var(--color-whithe);
+  background: var(--color-first);
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   width: 400px;
@@ -26,7 +18,7 @@
 }
 
 .header {
-  background: #df6868;
+  background: var(--color-first);
   border-bottom: 1px solid var(--color-second);
   padding: 20px 40px;
 }
