@@ -29,6 +29,10 @@
   height: 100%;
   object-fit: cover;
 }
+.wName {
+  font-size: 20px;
+  text-align: center;
+}
 #photo3 {
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +41,7 @@
   margin: auto;
 }
 
-.photoProfil p {
+.photoProfil .zoom {
   display: none;
 }
 .photoProfil button {
