@@ -1,3 +1,12 @@
+:root {
+  --color-first: lightgoldenrodyellow;
+  --color-second: #f0f0f0;
+  --color-whithe: #fff;
+  --color-text3: black;
+  --color-succes: #2ecc71;
+  --color-error: #e74c3c;
+}
+
 .boody {
   background: var(--color-second);
   font-family: "Open sabs" sans-serif;
@@ -72,7 +81,7 @@
 .form button {
   background: var(--color-first);
   border: 2px solid var(--color-first);
-  color: #f7f7f7;
+  color: var(--color-text3);
   display: block;
   font-family: inherit;
   border-radius: 4px;
