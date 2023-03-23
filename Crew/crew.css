@@ -3,7 +3,7 @@
 .mainCrew {
   width: 100%;
   padding: 24px;
-  margin-left: auto;
+  margin: auto;
 }
 .mainCrew h1 {
   background-color: var(--colorTheme);

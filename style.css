@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 8;
+  padding: 0;
 }
 
 :root {
@@ -217,6 +217,10 @@ input:checked + .slider:before {
   padding: 16px;
 }
 .description p {
+  background-color: lemonchiffon;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
   margin-top: 70px;
   font-weight: bold;
@@ -229,6 +233,7 @@ input:checked + .slider:before {
 }
 .actu h2 {
   background-color: var(--colorTheme);
+  color: var(--color-text1);
   width: 40%;
   border-radius: 16px;
   padding: 8px;
