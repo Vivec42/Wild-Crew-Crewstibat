@@ -13,11 +13,17 @@ body {
   background-color: lightgoldenrodyellow;
   font-family: "Varela", sans-serif;
 }
+a {
+  display: none;
+}
 
 header {
   background-color: var(--colorTheme);
+  position: relative;
+  width: 100%;
   height: 70px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
+  z-index: 3;
 }
 h1 {
   font-size: 1.6em;
@@ -34,11 +40,28 @@ nav {
   overflow: hidden;
   background-color: var(--colorTheme);
   position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-nav #myLinks {
-  display: none;
+#myLinks {
+  background-color: #e26464;
+  width: 100%;
+  height: 151px;
+  position: absolute;
+  transform: translateY(0);
+  top: -151px;
+  left: 0;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+#myLinks.translate {
+  transform: translateY(145%);
+  transition: all 0.8s ease-out;
 }
 
 /* Style navigation menu links */
@@ -46,8 +69,10 @@ nav a {
   color: var(--colorLight);
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-  display: block;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.3s;
 }
 
 /* Style the hamburger menu */
@@ -61,18 +86,47 @@ nav a.icon {
 
 .fa {
   color: var(--colorLight);
+  font-size: 40px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa.rotate {
+  transform: rotate(90deg);
+}
+
+#burgerButton {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: none;
+  padding: 18px;
+}
+
+.content {
+  margin-top: 0;
+  width: 100%;
+  height: 0px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.content.menu-open {
+  height: 149px;
+  transition: all 0.8s ease-out;
 }
 
 /* Add a grey background color on mouse-over */
-nav a:hover {
-  background-color: #ddd;
-  color: black;
+nav ul a:hover {
+  background-color: #ffffff;
+  color: var(--colorTheme);
+  transition: 0.3s;
 }
 
 /* Style the active link (or home/logo) */
 .active {
   background-color: #04aa6d;
-  color: (--colorLight);
+  color: var(--colorLight);
 }
 
 /* BURGER MENU */
@@ -84,7 +138,7 @@ nav a:hover {
   text-align: center;
   margin-top: 70px;
   font-weight: bold;
-  color: black;
+  color: var(--colorDark);
 }
 .actu {
   margin-top: 4rem;
