@@ -1,14 +1,14 @@
-<<<<<<< HEAD
+
 contact.css
 crew.html
 index.html
 script.js
 stylr.css
 README.md
-=======
 node_modules/
 
 package.json
 
 package-lock.json
->>>>>>> 36652da4344d221c8ff3f4fbe3b074520fafbb43
+.eslintrc.json
+

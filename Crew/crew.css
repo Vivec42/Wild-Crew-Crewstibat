@@ -6,7 +6,7 @@
   margin-left: auto;
 }
 .mainCrew h1 {
-  background-color: #f76c6c;
+  background-color: var(--colorTheme);
   width: 40%;
   border-radius: 16px;
   padding: 8px;
@@ -18,20 +18,68 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  gap: 10px;
+  gap: 20px;
 }
 .photoProfil {
   height: 200px;
 }
-.photoProfil img {
+.photoProfil .photoWilder {
   border-radius: 16px;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
 }
-.photoProfil p {
+/* .wName {
+  font-size: 20px;
+  text-align: center;} */
+
+.photo3 {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1/3;
+  width: 50%;
+  margin: auto;
+}
+
+.photoProfil .zoom {
   display: none;
 }
 .photoProfil button {
   display: none;
+}
+
+article.zoomProfil {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+article.zoomProfil .zoomImage {
+  border-radius: 16px;
+  width: 90%;
+  height: 60vh;
+  object-fit: cover;
+}
+article.zoomProfil .paragraphe {
+  background-color: white;
+  border-radius: 16px;
+}
+
+article.zoomProfil p {
+  padding: 5px;
+  text-align: center;
+}
+article.zoomProfil h2 {
+  padding: 5px;
+  text-align: center;
 }
