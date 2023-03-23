@@ -3,15 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --colorLight: White;
   --colorDark: black;
+  --color-second: #fafad2;
+  --color-text1: #ffffff;
+  --color-text2: #000000;
   --colorTheme: #f76c6c;
+  --color-succes: #2ecc71;
+  --color-error: #e74c3c;
 }
 /*nouveau css*/
 body {
-  background-color: lightgoldenrodyellow;
+  background-color: var(--color-second);
   font-family: "Varela", sans-serif;
+  transition: 0.5s;
 }
 a {
   display: none;
@@ -24,6 +31,7 @@ header {
   height: 70px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
   z-index: 3;
+  transition: 0.5s;
 }
 h1 {
   font-size: 1.6em;
@@ -65,7 +73,7 @@ nav {
 
 /* Style navigation menu links */
 ul a {
-  color: var(--colorLight);
+  color: var(--color-text1);
   padding: 12px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -75,8 +83,8 @@ ul a {
 }
 
 .fa {
-  color: var(--colorLight);
   font-size: 40px;
+  color: var(--color-text1);
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
@@ -108,8 +116,8 @@ ul a {
 }
 
 /* Add a grey background color on mouse-over */
-nav ul a:hover {
-  background-color: #ffffff;
+ul a:hover {
+  background-color: var(--color-second);
   color: var(--colorTheme);
   transition: 0.3s;
 }
@@ -117,10 +125,96 @@ nav ul a:hover {
 /* Style the active link (or home/logo) */
 .active {
   background-color: #04aa6d;
-  color: var(--colorLight);
+  color: var(--color-text1);
 }
 
 /* BURGER MENU */
+
+/* SWITCH THEME */
+
+#theme-toggle {
+  position: absolute;
+  padding: 10px;
+  right: 80px;
+}
+
+.dark-mode {
+  --colorTheme: #a11a1a;
+  --color-second: #232323;
+  --color-text1: #ffffff;
+  --color-text2: #fafad2;
+  transition: 0.5s;
+}
+
+#myLinks.dark-mode {
+  background-color: #921717;
+  transition: 0.5;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  top: 22px;
+  right: 60px;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dfdfbb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fffb00;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider.dark-mode:before {
+  background-color: #003186;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #232323;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* SWITCH THEME */
+
 .mainIndex {
   width: 100%;
   padding: 16px;
@@ -129,7 +223,8 @@ nav ul a:hover {
   text-align: center;
   margin-top: 70px;
   font-weight: bold;
-  color: var(--colorDark);
+  color: var(--color-text2);
+  transition: 0.5s;
 }
 .actu {
   margin-top: 4rem;
@@ -141,6 +236,7 @@ nav ul a:hover {
   border-radius: 16px;
   padding: 8px;
   margin: auto;
+  transition: 0.5s;
 }
 .caroussel {
   text-align: center;

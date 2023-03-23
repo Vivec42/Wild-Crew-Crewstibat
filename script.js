@@ -11,3 +11,33 @@ function burgerMenu() {
 }
 
 burgerMenu();
+
+const themeToggle = document.querySelector("#theme-toggle");
+const body = document.querySelector("body");
+const ul = document.querySelector("#myLinks");
+const slider = document.querySelector(".slider");
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  ul.classList.toggle("dark-mode");
+  slider.classList.toggle("dark-mode");
+
+  const theme = body.classList.contains("dark-mode") ? "DARK" : "LIGHT";
+  localStorage.setItem("pageTheme", JSON.stringify(theme));
+
+  if (theme === "DARK") {
+    ul.classList.add("dark-mode");
+    slider.classList.add("dark-mode");
+  } else {
+    ul.classList.remove("dark-mode");
+    slider.classList.remove("dark-mode");
+  }
+});
+
+const savedTheme = JSON.parse(localStorage.getItem("pageTheme"));
+if (savedTheme === "DARK") {
+  body.classList.add("dark-mode");
+  ul.classList.add("dark-mode");
+  slider.classList.add("dark-mode");
+  themeToggle.checked = true;
+}
