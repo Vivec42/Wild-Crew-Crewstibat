@@ -37,7 +37,6 @@ h1 {
 
 /* Style the navigation menu */
 nav {
-  overflow: hidden;
   background-color: var(--colorTheme);
   position: relative;
   height: 100%;
@@ -65,9 +64,9 @@ nav {
 }
 
 /* Style navigation menu links */
-nav a {
+ul a {
   color: var(--colorLight);
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-decoration: none;
   font-size: 20px;
   display: flex;
@@ -75,24 +74,16 @@ nav a {
   transition: 0.3s;
 }
 
-/* Style the hamburger menu */
-nav a.icon {
-  background: var(--colorLight);
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .fa {
   color: var(--colorLight);
   font-size: 40px;
   transform: rotate(0deg);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .fa.rotate {
   transform: rotate(90deg);
+  transition: transform 0.7s ease-in-out;
 }
 
 #burgerButton {
