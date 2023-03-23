@@ -120,7 +120,8 @@ const adoptWilders = [
     wImage: "../Assets/realxavier.png",
     wAlt: "Photo de Xavier",
     wDescription: "Le Maître du Code",
-    wObjectif: "",
+    wObjectif:
+      "Avoir une nouvelle cabane de jardin, Devenir dev web, Finir God of War ragnarok",
   },
 ];
 
