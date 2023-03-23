@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --colorLight: White;
+  --colorDark: black;
+  --colorTheme: #f76c6c;
+}
 /*nouveau css*/
 body {
   background-color: lightgoldenrodyellow;
@@ -14,8 +18,8 @@ a {
 }
 
 header {
+  background-color: var(--colorTheme);
   position: relative;
-  background-color: #f76c6c;
   width: 100%;
   height: 70px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
@@ -26,12 +30,15 @@ h1 {
   padding: 16px;
   display: flex;
   align-items: center;
+  color: var(--colorLight);
 }
 
 /* BURGER MENU */
 
 /* Style the navigation menu */
 nav {
+  overflow: hidden;
+  background-color: var(--colorTheme);
   position: relative;
   height: 100%;
   display: flex;
@@ -58,9 +65,9 @@ nav {
 }
 
 /* Style navigation menu links */
-ul a {
-  color: white;
-  padding: 12px 16px;
+nav a {
+  color: var(--colorLight);
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
   display: flex;
@@ -69,9 +76,17 @@ ul a {
 }
 
 /* Style the hamburger menu */
+nav a.icon {
+  background: var(--colorLight);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .fa {
+  color: var(--colorLight);
   font-size: 40px;
-  color: white;
   transform: rotate(0deg);
   transition: transform 0.5s ease-in-out;
 }
@@ -104,14 +119,14 @@ ul a {
 /* Add a grey background color on mouse-over */
 nav ul a:hover {
   background-color: #ffffff;
-  color: #f76c6c;
+  color: var(--colorTheme);
   transition: 0.3s;
 }
 
 /* Style the active link (or home/logo) */
 .active {
   background-color: #04aa6d;
-  color: white;
+  color: var(--colorLight);
 }
 
 /* BURGER MENU */
@@ -123,14 +138,14 @@ nav ul a:hover {
   text-align: center;
   margin-top: 70px;
   font-weight: bold;
-  color: black;
+  color: var(--colorDark);
 }
 .actu {
   margin-top: 4rem;
   margin-bottom: 6rem;
 }
 .actu h2 {
-  background-color: #f76c6c;
+  background-color: var(--colorTheme);
   width: 40%;
   border-radius: 16px;
   padding: 8px;
@@ -147,29 +162,3 @@ nav ul a:hover {
   max-width: 60%;
   height: auto;
 }
-
-/*nouveau css*/
-
-/* responsables essai
-.resp {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(4, 0.5fr, 1fr, 1fr, 1fr);
-  max-width: 360px;
-  gap: 1rem;
-  text-align: center;
-}
-.resp h2 {
-  background-color: #f76c6c;
-  width: 58%;
-  border-radius: 16px;
-  padding: 8px;
-  margin: auto;
-  margin-bottom: 24px;
-}
-
-.resp img {
-  width: 150px;
-  border-radius: 16px;
-}
-*/
