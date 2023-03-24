@@ -20,6 +20,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+.mainCrew section {
+  margin-bottom: 160px;
+}
+
 .photoProfil {
   height: 200px;
 }
@@ -63,6 +67,7 @@ article.zoomProfil {
   align-items: center;
   cursor: pointer;
   flex-wrap: wrap;
+  transition: 0.5s;
 }
 article.zoomProfil .zoomImage {
   border-radius: 16px;
@@ -82,4 +87,43 @@ article.zoomProfil p {
 article.zoomProfil h2 {
   padding: 5px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mainCrew ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .mainCrew ul li {
+    height: 300px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .mainCrew ul .photo1 {
+    grid-column: span 2;
+  }
+
+  .mainCrew ul .photo2 {
+    grid-column: span 2;
+  }
+
+  .mainCrew ul .photo3 {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-column: 2 / span 2;
+    /* width: 23%; */
+    margin: auto;
+  }
+  .mainCrew ul .photo4 {
+    grid-column: 1;
+  }
+
+  article.zoomProfil .zoomImage {
+    width: auto;
+    max-height: auto;
+    margin-right: 30px;
+  }
 }

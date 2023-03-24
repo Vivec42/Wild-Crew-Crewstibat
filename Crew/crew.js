@@ -131,7 +131,15 @@ function createProfil(profilW, index) {
   if (index === 2 || index === -1) {
     li.classList.add("photo3");
   }
-
+  if (index === 0) {
+    li.classList.add("photo1");
+  }
+  if (index === 1) {
+    li.classList.add("photo2");
+  }
+  if (index === 3) {
+    li.classList.add("photo4");
+  }
   wildersList.appendChild(li);
 
   const photo = document.createElement("img");
