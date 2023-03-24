@@ -126,4 +126,11 @@ article.zoomProfil h2 {
     max-height: auto;
     margin-right: 30px;
   }
+  .description p {
+    text-align: center;
+  }
+
+  .paragraphe {
+    width: 50%;
+  }
 }
