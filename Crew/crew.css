@@ -1,0 +1,136 @@
+/* CREW*/
+
+.mainCrew {
+  width: 100%;
+  padding: 24px;
+  margin: auto;
+}
+.mainCrew h1 {
+  background-color: var(--colorTheme);
+  width: 40%;
+  border-radius: 16px;
+  padding: 8px;
+  margin: auto;
+  margin-top: 42px;
+  margin-bottom: 56px;
+}
+.mainCrew ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.mainCrew section {
+  margin-bottom: 160px;
+}
+
+.photoProfil {
+  height: 200px;
+}
+.photoProfil .photoWilder {
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+/* .wName {
+  font-size: 20px;
+  text-align: center;} */
+
+.photo3 {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1/3;
+  width: 50%;
+  margin: auto;
+}
+
+.photoProfil .zoom {
+  display: none;
+}
+.photoProfil button {
+  display: none;
+}
+
+article.zoomProfil {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-wrap: wrap;
+  transition: 0.5s;
+}
+article.zoomProfil .zoomImage {
+  border-radius: 16px;
+  width: 90%;
+  height: 60vh;
+  object-fit: cover;
+}
+article.zoomProfil .paragraphe {
+  background-color: white;
+  border-radius: 16px;
+}
+
+article.zoomProfil p {
+  padding: 5px;
+  text-align: center;
+}
+article.zoomProfil h2 {
+  padding: 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mainCrew ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .mainCrew ul li {
+    height: 300px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .mainCrew ul .photo1 {
+    grid-column: span 2;
+  }
+
+  .mainCrew ul .photo2 {
+    grid-column: span 2;
+  }
+
+  .mainCrew ul .photo3 {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-column: 2 / span 2;
+    /* width: 23%; */
+    margin: auto;
+  }
+  .mainCrew ul .photo4 {
+    grid-column: 1;
+  }
+
+  article.zoomProfil .zoomImage {
+    width: auto;
+    max-height: auto;
+    margin-right: 30px;
+  }
+  .description p {
+    text-align: center;
+  }
+
+  .paragraphe {
+    width: 50%;
+  }
+}

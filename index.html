@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./Assets/WCS_Icon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Wild Crewstibat</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1>Wild Crewstibat</h1>
+        <button id="burgerButton"><i class="fa fa-bars"></i></button>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider round"></span>
+        </label>
+        <ul id="navLinks">
+          <a href="./index.html">Home</a>
+          <a href="./Crew/crew.html">Crew</a>
+          <a href="./Contact/contact.html">Inscription</a>
+        </ul>
+      </nav>
+    </header>
+    <ul id="myLinks">
+      <a href="./index.html">Home</a>
+      <a href="./Crew/crew.html">Crew</a>
+      <a href="./Contact/contact.html">Inscription</a>
+    </ul>
+    <div class="content"></div>
+
+    <main class="mainIndex">
+      <section class="description">
+        <p class="intro">
+          Le Wild crewstibat est un book qui vous permettra de retrouver vos
+          collègues de formation, avoir des informations sur eux, leurs projets,
+          et de les contacter par email.</br> </br> Le book peut aussi intéresser toute
+          entreprise en recherche de talents, de profils spécifiques, de
+          nouvelles recrues pour leurs projets futurs !
+        </p>
+      </section>
+
+      <section class="actu">
+        <h2>Actualité</h2>
+        <section class="bodyCarrousel">
+          <div class="container">
+            <input type="radio" name="slider" id="item-1" checked />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <div class="cards">
+              <label class="card" for="item-1" id="cat-1">
+                <img 
+                  src="./Assets/WCS.png"
+                  alt="un chat"
+                />
+                <figcaption>
+                  <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">Wild Code School</a>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur aperiam, laudantium quos omnis recusandae, rem magni
+                    fugit quisquam et ea nam delectus deleniti voluptates?
+                    Veritatis facilis nobis delectus sed quibusdam!
+                  </p>
+                </figcaption>
+              </label>
+              <label class="card" for="item-2" id="cat-2">
+                <img 
+                  src="./Assets/LFCB.png"
+                  alt="un chat qui dort"
+                />
+                <figcaption>
+                  <a href="https://lfcb-digitale.fr" target="_blank">LFCB</a>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur aperiam, laudantium quos omnis recusandae, rem magni
+                    fugit quisquam et ea nam delectus deleniti voluptates?
+                    Veritatis facilis nobis delectus sed quibusdam!
+                  </p>
+                </figcaption>
+              </label>
+              <label class="card" for="item-3" id="cat-3">
+                <img 
+                  src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="un gros chat roux"
+                />
+                <figcaption>
+                  <a href="">MIAOU</a>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tenetur aperiam, laudantium quos omnis recusandae, rem magni
+                    fugit quisquam et ea nam delectus deleniti voluptates?
+                    Veritatis facilis nobis delectus sed quibusdam!
+                  </p>
+                </figcaption>
+              </label>
+            </div>
+          </div>
+        </section>
+        <article class="lienwcs">
+          <a href="https://www.wildcodeschool.com/fr-FR">Wild Code School</a>
+        </article>
+        <article><a href=""></a></article>
+      </section>
+    </main>
+    <footer>
+      <p><strong>© ® ™ ℠ Wild Crewstibat</strong></p>
+      <ol>
+        <a href="https://www.youtube.com/channel/UCi99G_0QPx5sYsK8zdvQzfw" target="_blank"><img src="./Assets/Logo_Youtube.png" alt=""></a>
+        <a href="https://twitter.com/wildcodeschool?lang=en" target="_blank"><img src="./Assets/Logo_Twitter.png" alt=""></a>
+        <a href="https://www.linkedin.com/school/wild-code-school/" target="_blank"><img src="./Assets/Logo_Linkedin.png" alt=""></a>
+      </ol>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,485 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorLight: White;
+  --colorDark: black;
+  --color-second: linen;
+  --color-text1: #ffffff;
+  --color-text2: #000000;
+  --colorTheme: #f76c6c;
+  --color-succes: #2ecc71;
+  --color-error: #e74c3c;
+}
+/*nouveau css*/
+body {
+  background-color: var(--color-second);
+  font-family: "Varela", sans-serif;
+  transition: 0.5s;
+}
+
+header {
+  background-color: var(--colorTheme);
+  position: relative;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.356), 0 0 1rem rgba(0, 0, 0, 0.301);
+  z-index: 3;
+  transition: 0.5s;
+}
+h1 {
+  font-size: 1.6em;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--colorLight);
+}
+
+/* BURGER MENU */
+
+/* Style the navigation menu */
+#navLinks {
+  display: none;
+}
+
+nav {
+  background-color: var(--colorTheme);
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+#myLinks {
+  background-color: #e26464;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  transform: translateY(0);
+  top: -150px;
+  left: 0;
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
+#myLinks.translate {
+  transform: translateY(145%);
+  transition: all 0.8s ease-out;
+}
+
+/* Style navigation menu links */
+ul a {
+  color: var(--color-text1);
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.3s;
+}
+
+.fa {
+  font-size: 40px;
+  color: var(--color-text1);
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.7s ease-in-out;
+}
+
+#burgerButton {
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: none;
+  padding: 18px;
+}
+
+.content {
+  margin-top: 0;
+  width: 100%;
+  height: 0px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.content.menu-open {
+  height: 149px;
+  transition: all 0.8s ease-out;
+}
+
+/* Add a grey background color on mouse-over */
+ul a:hover {
+  background-color: var(--color-second);
+  color: var(--colorTheme);
+  transition: 0.3s;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04aa6d;
+  color: var(--color-text1);
+}
+
+/* BURGER MENU */
+
+/* SWITCH THEME */
+
+#theme-toggle {
+  position: absolute;
+  padding: 10px;
+  right: 80px;
+}
+
+.dark-mode {
+  --colorTheme: #a11a1a;
+  --color-first: #353535;
+  --color-second: #232323;
+  --color-text1: #ffffff;
+  --color-text2: #fafad2;
+  transition: 0.5s;
+}
+
+#myLinks.dark-mode {
+  background-color: #921717;
+  transition: 0.5;
+}
+
+label.dark-mode {
+  color: var(--color-text1);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  top: 22px;
+  right: 60px;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dfdfbb;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url("./Assets/sun.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider.dark-mode:before {
+  background-image: url("./Assets/moon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #232323;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* SWITCH THEME */
+
+.mainIndex {
+  width: 100%;
+  padding: 16px;
+}
+.intro {
+  background-color: lemonchiffon;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 70px;
+  max-width: 1000px;
+  font-weight: bold;
+  color: var(--color-text2);
+  transition: 0.5s;
+}
+.intro.dark-mode {
+  background-color: #353535;
+  transition: 0.5s;
+}
+
+.actu {
+  margin-top: 4rem;
+  margin-bottom: 20rem;
+}
+.actu h2 {
+  background-color: var(--colorTheme);
+  color: var(--color-text1);
+  width: 40%;
+  border-radius: 16px;
+  padding: 8px;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.lienwcs {
+  display: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+.bodyCarrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+  font-family: "DM Sans", sans-serif;
+  transition: 0.4s ease-in;
+}
+/*
+.bodyCarrousel.blue {
+  background-color: #428aa6;
+}
+*/
+input[type="radio"] {
+  display: none;
+}
+.card {
+  position: absolute;
+  width: 80%;
+  height: 300px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 50px -12px;
+}
+.container {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 600px;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+#item-1:checked ~ .cards #cat-3,
+#item-2:checked ~ .cards #cat-1,
+#item-3:checked ~ .cards #cat-2 {
+  transform: translatex(-40%) scale(0.6);
+  opacity: 0.8;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #cat-2,
+#item-2:checked ~ .cards #cat-3,
+#item-3:checked ~ .cards #cat-1 {
+  transform: translatex(40%) scale(0.6);
+  opacity: 0.8;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #cat-1,
+#item-2:checked ~ .cards #cat-2,
+#item-3:checked ~ .cards #cat-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#item-1:checked ~ .cards #cat-1 img,
+#item-2:checked ~ .cards #cat-2 img,
+#item-3:checked ~ .cards #cat-3 img {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+#cat-1 figcaption {
+  background-color: rgba(66, 58, 97, 0.712);
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease-in;
+  transition: all 0.6s ease-out;
+}
+
+#cat-1 figcaption a {
+  text-decoration: none;
+  color: white;
+}
+
+#cat-2 figcaption {
+  background-color: rgba(66, 58, 97, 0.712);
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease-in;
+  transition: all 0.6s ease-out;
+}
+
+#cat-2 figcaption a {
+  text-decoration: none;
+  color: white;
+}
+
+#cat-3 figcaption {
+  background-color: #423a61b6;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 0.6s ease-in;
+  transition: all 0.6s ease-out;
+}
+
+#cat-3 figcaption a {
+  text-decoration: none;
+  color: white;
+}
+
+.container:hover #cat-1 figcaption {
+  transform: translateY(0%);
+}
+.container:hover #cat-2 figcaption {
+  transform: translateY(0%);
+}
+.container:hover #cat-3 figcaption {
+  transform: translateY(0%);
+}
+/* FOOTER */
+
+footer {
+  position: fixed;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  bottom: 0;
+  background-color: var(--colorTheme);
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+}
+
+footer p strong {
+  box-sizing: 20px;
+}
+
+ol {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+}
+
+ol a img {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+}
+
+/* FOOTER */
+
+@media screen and (max-width: 680px) {
+  figcaption h2 {
+    font-size: 50%;
+  }
+  figcaption p {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fa {
+    display: none;
+  }
+
+  #burgerButton {
+    display: none;
+  }
+
+  .switch {
+    right: 500px;
+  }
+
+  #navLinks {
+    display: flex;
+  }
+  #navLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    width: 160px;
+  }
+}
