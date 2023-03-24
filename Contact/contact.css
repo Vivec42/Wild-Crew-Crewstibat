@@ -18,13 +18,13 @@
   overflow: hidden;
 }
 
-.contactContainer {
+/* .contactContainer {
   background: var(--color-first);
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   width: 400px;
   max-width: 100%;
-}
+} */
 
 .header {
   background: var(--color-first);
